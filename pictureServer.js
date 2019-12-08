@@ -86,8 +86,16 @@ const parser = new Readline({
 // Read data that is available on the serial port and send it to the websocket
 serial.pipe(parser);
 parser.on('data', function(data) {
-  console.log('Data:', data);
-  io.emit('server-msg', data);
+  //console.log('Data:', data);
+  //io.emit('server-msg', data);
+  var doorbellpic = new Date().toString().replace(/[&\/\\#,+()$~%.'":*?<>{}\s-]/g, '');
+  console.log('taking picture now');
+  console.log('making a picture at'+ doorbellpic); // Second, the name is logged to the console.
+  //Third, the picture is  taken and saved to the `public/`` folder
+  NodeWebcam.capture('public/'+doorbellpic, opts, function( err, data ) {
+  io.emit('newPicture',(doorbellpic+'.jpg')); ///Lastly, the new name is send to the client web browser.
+  /// The browser will take this new name and load the picture from the public folder.
+  });
 });
 //----------------------------------------------------------------------------//
 

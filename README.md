@@ -6,7 +6,7 @@
 
 **a. Link to a video of your HelloYou sketch running.**
 
-[Rei_HelloYou_Running](//)
+[Rei_HelloYou_Running](//youtu.be/4QxOQjrBF2c)
 
 ## Part B. Web Camera
 
@@ -17,7 +17,7 @@ First, there is a section for setting the configuration of the webcam, incuding 
 
 **b. Include a video of your working video doorbell**
 
-[Rei_Doorbell](//)
+[Rei_Doorbell](//youtu.be/jXe7JLFVsVk)
 
 ## Part C. Make it your own
 
